@@ -4,33 +4,19 @@
 # include <vector>
 # include <algorithm>
 
-
-//template <typename T>
-// int easyfind(T *arr, int size, int x)
-// {
-//     for (int i = 0; i < size; i++)
-//     {
-//         if (arr[i] == x)
-//             return (i);
-//     }
-//     return (-1);
-// }
-
 template <typename T>
 void easyfind(T &arr, int x)
 {
     typename T::iterator it = std::find(arr.begin(), arr.end(), x);
-    std::cout << *it;
-    if (it == arr.end())
-        std::cout << " I am at the end of array.\n";
-    else
-        std::cout << *it << std::endl;
-    // for (size_t i = 0; i < arr.size(); i++)
-    // {
-    //     if (arr[i] == x)
-    //         return (i);
-    // }
-    // return (-1);
+    if (it != arr.end())
+        std::cout << "The " << *it << " is at position " << std::distance(arr.begin(), arr.end()) << std::endl;
+    else if (it == arr.end())
+        std::cout << "I am at the end of array.\n";
+    
+   /* std::cout << "Array from function is:\n";
+/sau std::vector<int>::iterator it = arr.begin() ....
+    for (typename T::iterator it = arr.begin(); it!= arr.end(); it++)
+        std::cout << *it << " ";*/
 }
 
 #endif
