@@ -19,4 +19,16 @@ void easyfind(T &arr, int x)
         std::cout << *it << " ";*/
 }
 
+
+// template <typename T>
+// typename T::iterator easyfind(T& container, int x)
+// {
+//     typename T::iterator it = std::find(container.begin(), container.end(), x);
+//     if (it != container.end())
+//         return it;
+//     else
+//         throw std::runtime_error ("The value is not in the array.\n");
+// }
+
+
 #endif
